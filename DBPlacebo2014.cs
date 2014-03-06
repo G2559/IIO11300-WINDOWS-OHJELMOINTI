@@ -44,5 +44,47 @@ namespace JAMK.ICT.Data
             throw;
         }
     }
+
+    public static DataTable GetCities(string connectionStr, string taulu)
+    {
+        // basic principle: connect - execute query - disconnect
+        try
+        {
+            SqlConnection myConn = new SqlConnection(connectionStr);
+            myConn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM " + taulu, myConn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, taulu);
+           
+            return ds.Tables[taulu];
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
+
+    public static DataTable GetAllCustomersFromSQLServerWhere(string connectionStr, string taulu, out string viesti, string city)
+    {
+        // basic principle: connect - execute query - disconnect
+        try
+        {
+            SqlConnection myConn = new SqlConnection(connectionStr);
+            myConn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM " + taulu + " WHERE city = " + city, myConn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, taulu);
+            viesti = "Tiedot haettu onnistuneesti tietokannasta " + myConn.DataSource;
+            return ds.Tables[taulu];
+        }
+        catch (Exception ex)
+        {
+            viesti = ex.Message;
+            throw;
+        }
+    }
+      
   }
 }
