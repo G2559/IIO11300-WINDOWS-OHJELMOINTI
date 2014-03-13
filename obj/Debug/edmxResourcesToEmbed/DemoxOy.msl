@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DemoxOyModelStoreContainer" CdmEntityContainer="DemoxOyEntities">
+    <EntitySetMapping Name="asiakas">
+      <EntityTypeMapping TypeName="DemoxOyModel.asiakas">
+        <MappingFragment StoreEntitySet="asiakas">
+          <ScalarProperty Name="astunnus" ColumnName="astunnus" />
+          <ScalarProperty Name="asnimi" ColumnName="asnimi" />
+          <ScalarProperty Name="yhteyshlo" ColumnName="yhteyshlo" />
+          <ScalarProperty Name="maa" ColumnName="maa" />
+          <ScalarProperty Name="postinro" ColumnName="postinro" />
+          <ScalarProperty Name="postitmp" ColumnName="postitmp" />
+          <ScalarProperty Name="ostot" ColumnName="ostot" />
+          <ScalarProperty Name="asvuosi" ColumnName="asvuosi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

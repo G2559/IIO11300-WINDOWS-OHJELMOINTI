@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DemoxOyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DemoxOyModelStoreContainer">
+    <EntitySet Name="asiakas" EntityType="DemoxOyModel.Store.asiakas" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="asiakas">
+    <Key>
+      <PropertyRef Name="astunnus" />
+    </Key>
+    <Property Name="astunnus" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="asnimi" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="yhteyshlo" Type="char" MaxLength="32" />
+    <Property Name="maa" Type="char" MaxLength="3" />
+    <Property Name="postinro" Type="char" MaxLength="5" />
+    <Property Name="postitmp" Type="char" MaxLength="10" />
+    <Property Name="ostot" Type="float" />
+    <Property Name="asvuosi" Type="smallint" />
+  </EntityType>
+</Schema>

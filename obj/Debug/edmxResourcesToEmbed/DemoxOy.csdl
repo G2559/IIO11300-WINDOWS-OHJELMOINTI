@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DemoxOyModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DemoxOyEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="asiakas" EntityType="DemoxOyModel.asiakas" />
+  </EntityContainer>
+  <EntityType Name="asiakas">
+    <Key>
+      <PropertyRef Name="astunnus" />
+    </Key>
+    <Property Name="astunnus" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+    <Property Name="asnimi" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="yhteyshlo" Type="String" MaxLength="32" Unicode="false" FixedLength="true" />
+    <Property Name="maa" Type="String" MaxLength="3" Unicode="false" FixedLength="true" />
+    <Property Name="postinro" Type="String" MaxLength="5" Unicode="false" FixedLength="true" />
+    <Property Name="postitmp" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="ostot" Type="Double" />
+    <Property Name="asvuosi" Type="Int16" />
+  </EntityType>
+</Schema>

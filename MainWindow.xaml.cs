@@ -41,8 +41,8 @@ namespace H10ADOBlanco
       //lbMessages.Content = JAMK.ICT.Properties.Settings.Default.Tietokanta;
 
       connector = JAMK.ICT.Properties.Settings.Default.Tietokanta;
-      
-      dt = DBPlacebo.GetCities(connector, "customer");
+
+      dt = DBPlacebo.GetCitiesOfCustomersFromSQLServer(connector, "customer");
 
       DataView view = new DataView(dt);
 
@@ -77,6 +77,7 @@ namespace H10ADOBlanco
     private void btnGetFrom_Click(object sender, RoutedEventArgs e)
     {
         //KESKENKESKENKESKEN, muut toimii
+        /*
         viesti = "";
       //TODO
         try
@@ -92,7 +93,7 @@ namespace H10ADOBlanco
             
             throw;
         }
-
+        */
     }
 
   }
