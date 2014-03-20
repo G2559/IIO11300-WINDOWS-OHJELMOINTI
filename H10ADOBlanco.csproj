@@ -70,6 +70,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Viini.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Viini.xsd</DependentUpon>
+    </Compile>
+    <Page Include="MainWindowV4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindowV3EF.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -88,6 +97,9 @@
     </Compile>
     <Compile Include="asiakas.cs">
       <DependentUpon>demox.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindowV4.xaml.cs">
+      <DependentUpon>MainWindowV4.xaml</DependentUpon>
     </Compile>
     <Compile Include="demox.Context.cs">
       <AutoGen>True</AutoGen>
@@ -157,6 +169,17 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Viini.xsc">
+      <DependentUpon>Viini.xsd</DependentUpon>
+    </None>
+    <None Include="Viini.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Viini.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Viini.xss">
+      <DependentUpon>Viini.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
